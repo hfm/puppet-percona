@@ -1,4 +1,7 @@
-# percona
+# puppet-percona
+
+[![Build Status](https://img.shields.io/travis/hfm/puppet-percona/master.svg?style=flat-square)](https://travis-ci.org/hfm/puppet-percona)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/hfm/percona.svg?style=flat-square)](https://forge.puppetlabs.com/hfm/percona)
 
 #### Table of Contents
 
