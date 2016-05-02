@@ -34,7 +34,6 @@ describe 'percona class' do
     end
 
     %W(
-      percona-release-noarch
       percona-release-source
       percona-testing-$basearch
       percona-testing-noarch
