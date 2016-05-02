@@ -62,18 +62,13 @@ class percona::repo {
       }
     }
     'Debian': {
-      apt::key { 'percona-keyring':
-        id      => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A'
-        content =>
-      }
-
       apt::source { 'percona-release':
         location => 'http://repo.percona.com/apt',
-        release  => 'percona',
+        release  => $::os::distro::codename,
         repos    => 'main',
         key      => {
-          id     => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A',
-          source => $gpgkey,
+          id      => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A',
+          content => file('percona/GPG-key-percona'),
         },
         include  => {
           'src' => true,

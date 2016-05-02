@@ -48,4 +48,12 @@ describe 'percona class' do
       end
     end
   end
+
+  context 'Debian', :if => os[:family] == 'ubuntu' do
+    describe file('/etc/apt/sources.list.d/percona-release.list') do
+      it { should be_file }
+      its(:content) { should match %r|^deb http://repo.percona.com/apt trusty main$| }
+      its(:content) { should match %r|^deb-src http://repo.percona.com/apt trusty main$| }
+    end
+  end
 end
