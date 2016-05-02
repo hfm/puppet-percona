@@ -1,13 +1,15 @@
 {
   "name": "hfm-percona",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "hfm",
   "summary": "Install, configures, and manages the Percona products.",
   "license": "MIT",
   "source": "https://github.com/hfm/puppet-percona",
   "project_page": "https://github.com/hfm/puppet-percona",
   "issues_url": "https://github.com/hfm/puppet-percona/issues",
-  "dependencies": [ ],
+  "dependencies": [
+
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
