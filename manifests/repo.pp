@@ -61,6 +61,26 @@ class percona::repo {
           enabled => 0;
       }
     }
+    'Debian': {
+      apt::key { 'percona-keyring':
+        id      => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A'
+        content =>
+      }
+
+      apt::source { 'percona-release':
+        location => 'http://repo.percona.com/apt',
+        release  => 'percona',
+        repos    => 'main',
+        key      => {
+          id     => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A',
+          source => $gpgkey,
+        },
+        include  => {
+          'src' => true,
+          'deb' => true,
+        },
+      }
+    }
     default: {
       fail("Unsupported osfamily: ${::osfamily}")
     }

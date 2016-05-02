@@ -13,3 +13,8 @@ matrix:
     services: docker
     env: BEAKER_set=centos7
     script: bundle exec rake beaker
+  - rvm: default
+    sudo: required
+    services: docker
+    env: BEAKER_set=trusty
+    script: bundle exec rake beaker
