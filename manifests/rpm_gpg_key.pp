@@ -22,7 +22,7 @@ class percona::rpm_gpg_key (
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => file('percona/RPM-GPG-KEY-Percona'),
+    content => file('percona/GPG-key-percona'),
     before  => Exec['import-percona'],
   }
 

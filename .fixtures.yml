@@ -1,3 +1,5 @@
 fixtures:
+  forge_modules:
+    apt: "puppetlabs/apt"
   symlinks:
     percona: "#{source_dir}"
