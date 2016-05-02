@@ -25,7 +25,7 @@ describe 'percona class' do
     end
 
     %W(
-      percona-release-$basearch
+      percona-release-#{os[:arch]}
       percona-release-noarch
     ).each do |repo|
       describe yumrepo(repo) do
@@ -35,10 +35,10 @@ describe 'percona class' do
 
     %W(
       percona-release-source
-      percona-testing-$basearch
+      percona-testing-#{os[:arch]}
       percona-testing-noarch
       percona-testing-source
-      percona-experimental-$basearch
+      percona-experimental-#{os[:arch]}
       percona-experimental-noarch
       percona-experimental-source
     ).each do |repo|
