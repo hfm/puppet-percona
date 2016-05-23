@@ -32,16 +32,6 @@
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
-# Authors
-# -------
-#
-# Author Name <author@domain.com>
-#
-# Copyright
-# ---------
-#
-# Copyright 2016 Your name here, unless otherwise noted.
-#
 class percona {
 
 
