@@ -10,6 +10,9 @@
     * [Beginning with percona](#beginning-with-percona)
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+  - [Public Classes](#public-classes)
+  - [Private Classes](#private-classes)
+  - [Parameters](#parameters)
 1. [Limitations - OS compatibility, etc.](#limitations)
 1. [Development - Guide for contributing to the module](#development)
 
@@ -35,17 +38,20 @@ include 'percona::repo'
 
 ## Reference
 
-### Classes
+### Public Classes
 
-#### Public Classes
+- `percona::repo`: Configure the Percona repository and import the GPG keys.
+- [`percona::toolkit`](#class-perconatoolkit): Install and configures [percona-toolkit](https://www.percona.com/doc/percona-toolkit).
 
-- [`percona::repo`](#remi): Configure the Percona repository and import the GPG keys.
-
-#### Private Classes
+### Private Classes
 
 - `percona::rpm_gpg_key`: Import the RPM GPG key for the Percona.
 
 ### Parameters
+
+#### Class: percona::toolkit
+
+- `ensure`: What state the package should be in. Default to installed.
 
 ## Limitations
 
