@@ -42,6 +42,7 @@ include 'percona::repo'
 
 - `percona::repo`: Configure the Percona repository and import the GPG keys.
 - [`percona::toolkit`](#class-perconatoolkit): Install and configures [percona-toolkit](https://www.percona.com/doc/percona-toolkit).
+- [`percona::xtrabackup`](#class-perconaxtrabackup): Install and configures [percona-xtrabackup](https://www.percona.com/doc/percona-xtrabackup).
 
 ### Private Classes
 
@@ -52,6 +53,11 @@ include 'percona::repo'
 #### Class: percona::toolkit
 
 - `ensure`: What state the package should be in. Default to installed.
+
+#### Class: percona::xtrabackup
+
+- `ensure`: What state the package should be in. Default to installed.
+-  `version`: Specify package version. Valid options: a string. Default to undef.
 
 ## Limitations
 
