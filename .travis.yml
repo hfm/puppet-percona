@@ -16,5 +16,5 @@ matrix:
   - rvm: default
     sudo: required
     services: docker
-    env: BEAKER_set=trusty
+    env: BEAKER_set=jessie
     script: bundle exec rake beaker
