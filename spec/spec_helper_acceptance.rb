@@ -13,7 +13,7 @@ RSpec.configure do |c|
 
     # Install dependencies
     hosts.each do |host|
-      # on(host, puppet('module', 'install', 'puppetlabs-stdlib'))
+      on(host, puppet('module', 'install', 'puppetlabs-stdlib'))
       if host.platform.match /(debian|ubuntu)/
         on(host, puppet('module', 'install', 'puppetlabs-apt'))
       end
