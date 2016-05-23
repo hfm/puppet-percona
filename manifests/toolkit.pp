@@ -1,16 +1,14 @@
-# Class: percona
+# Class: percona::toolkit
 # ===========================
 #
-# Full description of class percona here.
+# percona::toolkit is to install percona-toolkit.
 #
 # Parameters
 # ----------
 #
-# Document parameters here.
+# * `ensure`
+# What state the package should be in. Default to installed.
 #
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
 class percona::toolkit (
   $ensure = installed,
 ){
