@@ -62,21 +62,8 @@ class percona::repo {
       }
     }
     'Debian': {
-      if $::operatingsystem == 'Ubuntu' {
-        $release = $::os::distro::codename
-      } elsif $::operatingsystem == 'Debian' {
-        $release = $::os::release::major ? {
-          '6' => 'squeeze',
-          '7' => 'wheezy',
-          '8' => 'jessie',
-        }
-      } else {
-        fail("Unsupported operatingsystem: ${::operatingsystem}")
-      }
-
       apt::source { 'percona-release':
         location => 'http://repo.percona.com/apt',
-        release  => $release,
         repos    => 'main',
         key      => {
           id      => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A',
