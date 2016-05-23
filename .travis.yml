@@ -18,3 +18,8 @@ matrix:
     services: docker
     env: BEAKER_set=jessie
     script: bundle exec rake beaker
+  - rvm: default
+    sudo: required
+    services: docker
+    env: BEAKER_set=xenial
+    script: bundle exec rake beaker

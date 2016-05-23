@@ -1,8 +1,9 @@
 HOSTS:
-  ubuntu-trusty-x64:
-    platform: ubuntu-trusty-x86_64
-    image: ubuntu:trusty
+  ubuntu-xenial-x64:
+    platform: ubuntu-xenial-x86_64
+    image: ubuntu:xenial
     hypervisor: docker
+    docker_cmd: '["/sbin/init"]'
     docker_image_commands:
       - 'apt-get install -y sudo wget'
 CONFIG:
