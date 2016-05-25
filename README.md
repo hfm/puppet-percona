@@ -34,7 +34,21 @@ include 'percona::repo'
 
 ### Configuring modules
 
+```puppet
+class { 'percona::repo':
+  percona_release_basearch_enabled => 0,
+  percona_release_noarch_enabled   => 0,
+}
+```
+
 ### Configuring modules from Hiera
+
+```yaml
+---
+# default off
+percona::repo::percona_release_basearch_enabled: 0
+percona::repo::percona_release_noarch_enabled: 0
+```
 
 ## Reference
 
