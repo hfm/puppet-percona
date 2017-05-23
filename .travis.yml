@@ -2,11 +2,8 @@ language: ruby
 cache: bundler
 matrix:
   include:
-  - rvm: 2.1.0
-    env: PUPPET_VERSION='~> 3.8.0'
-    script: bundle exec rake all
   - rvm: 2.3.0
-    env: PUPPET_VERSION='~> 4.4.0'
+    env: PUPPET_VERSION='~> 4.3'
     script: bundle exec rake all
   - rvm: default
     sudo: required
