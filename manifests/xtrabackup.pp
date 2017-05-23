@@ -18,7 +18,6 @@ class percona::xtrabackup (
 ){
 
   if $version {
-    validate_re($version, '^\d\.\d$')
     $suffix = regsubst($version, '^(\d)\.(\d)$','\1\2')
 
     $package_name = "percona-xtrabackup-${suffix}"
