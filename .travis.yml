@@ -2,21 +2,13 @@ language: ruby
 cache: bundler
 matrix:
   include:
-  - rvm: 2.3.0
-    env: PUPPET_VERSION='~> 4.3'
-    script: bundle exec rake all
   - rvm: default
     sudo: required
     services: docker
     env: BEAKER_set=centos7
-    script: bundle exec rake beaker
-  - rvm: default
-    sudo: required
-    services: docker
-    env: BEAKER_set=jessie
-    script: bundle exec rake beaker
+    script: bundle exec rake all beaker
   - rvm: default
     sudo: required
     services: docker
     env: BEAKER_set=xenial
-    script: bundle exec rake beaker
+    script: bundle exec rake all beaker
