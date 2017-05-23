@@ -15,8 +15,18 @@ class percona::toolkit (
 
   require 'percona::repo'
 
-  package { 'percona-toolkit':
-    ensure => $ensure,
+  case $facts['osfamily'] {
+    'Debian': {
+      package { 'percona-toolkit':
+        ensure          => $ensure,
+        install_options => ['--allow-unauthenticated'],
+      }
+    }
+    default: {
+      package { 'percona-toolkit':
+        ensure => $ensure,
+      }
+    }
   }
 
 }
