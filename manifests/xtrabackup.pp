@@ -30,8 +30,7 @@ class percona::xtrabackup (
   case $facts['osfamily'] {
     'Debian': {
       package { $package_name:
-        ensure          => $ensure,
-        install_options => ['--allow-unauthenticated'],
+        ensure => $ensure,
       }
     }
     default: {

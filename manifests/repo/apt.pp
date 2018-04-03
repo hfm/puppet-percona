@@ -11,8 +11,8 @@ class percona::repo::apt (
     location => 'http://repo.percona.com/apt',
     repos    => 'main',
     key      => {
-      id      => '430BDF5C56E7C94E848EE60C1C4CBDCDCD2EFD2A',
-      content => file('percona/GPG-key-percona'),
+      id     => '4D1BB29D63D98E422B2113B19334A25F8507EFA5',
+      server => 'keyserver.ubuntu.com',
     },
     include  => {
       'src' => true,

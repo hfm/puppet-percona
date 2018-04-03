@@ -18,8 +18,7 @@ class percona::toolkit (
   case $facts['osfamily'] {
     'Debian': {
       package { 'percona-toolkit':
-        ensure          => $ensure,
-        install_options => ['--allow-unauthenticated'],
+        ensure => $ensure,
       }
     }
     default: {
