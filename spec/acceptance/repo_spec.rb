@@ -24,23 +24,23 @@ describe 'percona class' do
       it { is_expected.to be_file }
     end
 
-    %W[
-      percona-release-#{os[:arch]}
-      percona-release-noarch
+    [
+      "percona-release-#{os[:arch]}",
+      'percona-release-noarch',
     ].each do |repo|
       describe yumrepo(repo) do
         it { is_expected.to be_enabled }
       end
     end
 
-    %W[
-      percona-release-source
-      percona-testing-#{os[:arch]}
-      percona-testing-noarch
-      percona-testing-source
-      percona-experimental-#{os[:arch]}
-      percona-experimental-noarch
-      percona-experimental-source
+    [
+      'percona-release-source',
+      "percona-testing-#{os[:arch]}",
+      'percona-testing-noarch',
+      'percona-testing-source',
+      "percona-experimental-#{os[:arch]}",
+      'percona-experimental-noarch',
+      'percona-experimental-source',
     ].each do |repo|
       describe yumrepo(repo) do
         it { is_expected.to exist }
