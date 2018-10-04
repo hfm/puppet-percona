@@ -1,3 +1,9 @@
+# Changelog
+
+## [v0.4.0](https://github.com/hfm/puppet-percona/compare/v0.3.0...v0.4.0) (2018-10-04)
+
+* Support newer libraries [#13](https://github.com/hfm/puppet-percona/pull/13) ([hfm](https://github.com/hfm))
+
 ## [v0.3.0](https://github.com/hfm/puppet-percona/compare/v0.2.0...v0.3.0) (2018-08-06)
 
 * pdk convert [#12](https://github.com/hfm/puppet-percona/pull/12) ([hfm](https://github.com/hfm))
